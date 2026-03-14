@@ -1,45 +1,25 @@
 class Main {
    
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
         int n = 5;
 
-      
-        for (int i = 1; i <= n; i++) {
+        for (int i = -n + 1; i < n; i++) {
+            int s = Math.abs(i);
 
-            for (int j = i; j < n; j++) {
+            for (int j = 0; j < s; j++)
                 System.out.print(" ");
-            }
 
             System.out.print("*");
 
-            if (i > 1) {
-                for (int j = 1; j <= 2 * i - 3; j++) {
+            if (s != n - 1) {
+                for (int j = 0; j < 2 * (n - s) - 3; j++)
                     System.out.print(" ");
-                }
-                System.out.print("*");
-            }
-
-            System.out.println();
-        }
-
-        
-        for (int i = n - 1; i >= 1; i--) {
-
-            for (int j = n; j > i; j--) {
-                System.out.print(" ");
-            }
-
-            System.out.print("*");
-
-            if (i > 1) {
-                for (int j = 1; j <= 2 * i - 3; j++) {
-                    System.out.print(" ");
-                }
                 System.out.print("*");
             }
 
             System.out.println();
         }
     }
+
 }
